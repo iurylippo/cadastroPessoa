@@ -8,8 +8,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PessoasComponent implements OnInit {
 
+  _filtroLista: string;
+  get filtroLista(): string {
+    return this._filtroLista;
+  }
+  set filtroLista(value: string) {
+    this._filtroLista = value;
+    this.pessoasFiltradas = this.filtroLista ? this.filtrarPessoas(this.filtroLista) : this.pessoas;
+  }
+
+  pessoasFiltradas: any = [];
   pessoas: any = [];
-  filtroLista = '';
+  
 
   constructor(private http: HttpClient) { }
 
@@ -17,9 +27,17 @@ export class PessoasComponent implements OnInit {
     this.getPessoas();
   }
 
+  filtrarPessoas(filtrarPor: string) : any {
+    filtrarPor = filtrarPor.toLocaleLowerCase();
+    return this.pessoas.filter(
+      pessoa => (pessoa.nome.toLocaleLowerCase().indexOf(filtrarPor)) !== -1  || (pessoa.cpf.toLocaleLowerCase().indexOf(filtrarPor)) !== -1 
+    );
+  }
+
   getPessoas() {
     this.http.get('http://localhost:5000/site/values/').subscribe(response => { 
       this.pessoas = response;
+      this.pessoasFiltradas = this.pessoas;
     }, error => {
       console.log(error);
     });
