@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PessoasComponent implements OnInit {
 
-  pessoas: any;
+  pessoas: any = [];
 
   constructor(private http: HttpClient) { }
 

@@ -1,11 +1,37 @@
-<p>
-  pessoas works!
-</p>
-
-<div *ngFor="let pessoa of pessoas">
-  Nome: {{pessoa.nome}}
-  
-  Cpf: {{pessoa.cpf}}
-  <hr>
-</div>
-
+<form class="form-inline">
+  <div class="form-group mb-2">
+    <input type="text" class="form-control mr-2" placeholder="Buscar">
+    <button class="btn btn-outline-success">Buscar</button>
+  </div>
+</form>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Cpf</th>
+      <th>Idade</th>
+      <th>Peso</th>
+      <th>Altura</th>
+      <th>Imc</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="pessoas && pessoas.length">
+    <tr *ngFor=" let pessoa of pessoas">
+      <td>{{pessoa.pessoaId}}</td>
+      <td>{{pessoa.nome}}</td>
+      <td>{{pessoa.cpf}}</td>
+      <td>{{pessoa.idade}}</td>
+      <td>{{pessoa.peso}}</td>
+      <td>{{pessoa.altura}}</td>
+      <td>{{pessoa.imc}}</td>
+    </tr>
+  </tbody>
+  <tfoot *ngIf="!pessoas.length"> 
+    <tr>
+      <td colspan="7" class="text-center">
+        <h4>Nenhuma Pessoa encontrada =[</h4>
+      </td>
+    </tr>
+  </tfoot>
+</table>
