@@ -1,0 +1,9 @@
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\bin\Debug\netstandard2.0\CadastroPessoa.Domain.deps.json
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\bin\Debug\netstandard2.0\CadastroPessoa.Domain.dll
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\bin\Debug\netstandard2.0\CadastroPessoa.Domain.pdb
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\obj\Debug\netstandard2.0\CadastroPessoa.Domain.csprojAssemblyReference.cache
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\obj\Debug\netstandard2.0\CadastroPessoa.Domain.csproj.CoreCompileInputs.cache
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\obj\Debug\netstandard2.0\CadastroPessoa.Domain.AssemblyInfoInputs.cache
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\obj\Debug\netstandard2.0\CadastroPessoa.Domain.AssemblyInfo.cs
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\obj\Debug\netstandard2.0\CadastroPessoa.Domain.dll
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Domain\obj\Debug\netstandard2.0\CadastroPessoa.Domain.pdb

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CadastroPessoa.API.Model;
-using CadastroPessoa.API.Model.Data;
+using CadastroPessoa.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,8 +13,8 @@ namespace CadastroPessoa.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        public readonly PessoaContext _context;
-        public ValuesController(PessoaContext context)
+        public readonly CadastroPessoaContext _context;
+        public ValuesController(CadastroPessoaContext context)
         {
             _context = context;
             
@@ -42,7 +41,7 @@ namespace CadastroPessoa.API.Controllers
         {
            try
             {
-                var results = await _context.Pessoas.FirstOrDefaultAsync(i => i.PessoaId == id);;
+                var results = await _context.Pessoas.FirstOrDefaultAsync(i => i.Id == id);;
                 return Ok(results);
             }
             catch (System.Exception)

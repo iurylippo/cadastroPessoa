@@ -1,0 +1,12 @@
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\bin\Debug\netstandard2.0\CadastroPessoa.Repository.deps.json
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\bin\Debug\netstandard2.0\CadastroPessoa.Repository.dll
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\bin\Debug\netstandard2.0\CadastroPessoa.Repository.pdb
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\bin\Debug\netstandard2.0\CadastroPessoa.Domain.dll
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\bin\Debug\netstandard2.0\CadastroPessoa.Domain.pdb
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\obj\Debug\netstandard2.0\CadastroPessoa.Repository.csprojAssemblyReference.cache
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\obj\Debug\netstandard2.0\CadastroPessoa.Repository.csproj.CoreCompileInputs.cache
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\obj\Debug\netstandard2.0\CadastroPessoa.Repository.AssemblyInfoInputs.cache
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\obj\Debug\netstandard2.0\CadastroPessoa.Repository.AssemblyInfo.cs
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\obj\Debug\netstandard2.0\CadastroPessoa.Repository.csproj.CopyComplete
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\obj\Debug\netstandard2.0\CadastroPessoa.Repository.dll
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.Repository\obj\Debug\netstandard2.0\CadastroPessoa.Repository.pdb

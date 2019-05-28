@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-pessoas',
@@ -7,6 +8,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./pessoas.component.css']
 })
 export class PessoasComponent implements OnInit {
+
+  pessoasFiltradas: any = [];
+  pessoas: any = [];
 
   _filtroLista: string;
   get filtroLista(): string {
@@ -16,10 +20,6 @@ export class PessoasComponent implements OnInit {
     this._filtroLista = value;
     this.pessoasFiltradas = this.filtroLista ? this.filtrarPessoas(this.filtroLista) : this.pessoas;
   }
-
-  pessoasFiltradas: any = [];
-  pessoas: any = [];
-  
 
   constructor(private http: HttpClient) { }
 

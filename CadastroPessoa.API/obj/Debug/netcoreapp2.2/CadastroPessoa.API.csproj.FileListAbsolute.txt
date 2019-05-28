@@ -2,7 +2,10 @@ D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\Cadas
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.API.runtimeconfig.json
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.API.runtimeconfig.dev.json
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.API.dll
-D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.API.pdb
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.Domain.dll
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.Repository.dll
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.Domain.pdb
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.Repository.pdb
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.csprojAssemblyReference.cache
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.csproj.CoreCompileInputs.cache
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.RazorAssemblyInfo.cache
@@ -10,5 +13,7 @@ D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\Cadas
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.AssemblyInfoInputs.cache
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.AssemblyInfo.cs
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.RazorTargetAssemblyInfo.cache
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.csproj.CopyComplete
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.dll
 D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\obj\Debug\netcoreapp2.2\CadastroPessoa.API.pdb
+D:\projetoVectra\cadastroPessoa\CadastroPessoa.API\bin\Debug\netcoreapp2.2\CadastroPessoa.API.pdb

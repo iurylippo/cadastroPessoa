@@ -1,83 +1,9 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.API\\CadastroPessoa.API.csproj": {}
+    "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.Repository\\CadastroPessoa.Repository.csproj": {}
   },
   "projects": {
-    "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.API\\CadastroPessoa.API.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.API\\CadastroPessoa.API.csproj",
-        "projectName": "CadastroPessoa.API",
-        "projectPath": "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.API\\CadastroPessoa.API.csproj",
-        "packagesPath": "C:\\Users\\Iury_\\.nuget\\packages\\",
-        "outputPath": "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.API\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Iury_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {
-              "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.Domain\\CadastroPessoa.Domain.csproj": {
-                "projectPath": "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.Domain\\CadastroPessoa.Domain.csproj"
-              },
-              "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.Repository\\CadastroPessoa.Repository.csproj": {
-                "projectPath": "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.Repository\\CadastroPessoa.Repository.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
     "D:\\projetoVectra\\cadastroPessoa\\CadastroPessoa.Domain\\CadastroPessoa.Domain.csproj": {
       "version": "1.0.0",
       "restore": {

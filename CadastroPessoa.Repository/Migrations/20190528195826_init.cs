@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CadastroPessoa.API.Migrations
+namespace CadastroPessoa.Repository.Migrations
 {
     public partial class init : Migration
     {
@@ -11,7 +11,7 @@ namespace CadastroPessoa.API.Migrations
                 name: "Pessoas",
                 columns: table => new
                 {
-                    PessoaId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(nullable: true),
                     Cpf = table.Column<string>(nullable: true),
@@ -22,7 +22,7 @@ namespace CadastroPessoa.API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pessoas", x => x.PessoaId);
+                    table.PrimaryKey("PK_Pessoas", x => x.Id);
                 });
         }
 

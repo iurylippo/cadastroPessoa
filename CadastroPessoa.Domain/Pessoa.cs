@@ -1,8 +1,8 @@
-namespace CadastroPessoa.API.Model
+namespace CadastroPessoa.Domain
 {
     public class Pessoa
     {
-        public int PessoaId { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public double Idade { get; set; }
