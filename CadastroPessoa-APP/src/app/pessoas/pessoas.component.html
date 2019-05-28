@@ -1,9 +1,10 @@
-<form class="form-inline">
+<div class="form-inline">
   <div class="form-group mb-2">
-    <input type="text" class="form-control mr-2" placeholder="Buscar">
+    <input type="text" class="form-control mr-2" placeholder="Buscar" [(ngModel)]="filtroLista">
     <button class="btn btn-outline-success">Buscar</button>
   </div>
-</form>
+</div>
+<h3>Filtro: {{filtroLista}}</h3>
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
@@ -14,6 +15,7 @@
       <th>Peso</th>
       <th>Altura</th>
       <th>Imc</th>
+      <th>Opções</th>
     </tr>
   </thead>
   <tbody *ngIf="pessoas && pessoas.length">
