@@ -20,12 +20,12 @@
   <tbody *ngIf="pessoas && pessoas.length">
     <tr *ngFor=" let pessoa of pessoasFiltradas">
       <td>{{pessoa.pessoaId}}</td>
-      <td>{{pessoa.nome}}</td>
+      <td>{{pessoa.nome | titlecase}}</td>
       <td>{{pessoa.cpf}}</td>
       <td>{{pessoa.idade}}</td>
-      <td>{{pessoa.peso}}</td>
-      <td>{{pessoa.altura}}</td>
-      <td>{{pessoa.imc}}</td>
+      <td>{{pessoa.peso}}k</td>
+      <td>{{pessoa.altura}}h</td>
+      <td><strong>{{pessoa.imc | number : "1.2-2"}}</strong></td>
       <td  class="text-center">
         <button type="button" class="btn btn-warning m-1" tooltip="Editar"><i class="fas fa-redo-alt mr-2"></i>Alterar</button>
         <button class="btn btn-danger m-1" tooltip="Deletar"><i class="fas fa-trash-alt mr-2"></i>Deletar</button>
