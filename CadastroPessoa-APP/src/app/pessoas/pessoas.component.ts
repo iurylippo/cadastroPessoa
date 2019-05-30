@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { PessoaService } from '../_services/Pessoa.service';
+import { Pessoa } from '../_models/Pessoa';
 
 
 @Component({
@@ -9,8 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PessoasComponent implements OnInit {
 
-  pessoasFiltradas: any = [];
-  pessoas: any = [];
+  pessoasFiltradas: Pessoa[];
+  pessoas: Pessoa[];
 
   _filtroLista: string;
   get filtroLista(): string {
@@ -21,13 +22,13 @@ export class PessoasComponent implements OnInit {
     this.pessoasFiltradas = this.filtroLista ? this.filtrarPessoas(this.filtroLista) : this.pessoas;
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private pessoaService : PessoaService) { }
 
   ngOnInit() {
     this.getPessoas();
   }
 
-  filtrarPessoas(filtrarPor: string) : any {
+  filtrarPessoas(filtrarPor: string) : Pessoa[] {
     filtrarPor = filtrarPor.toLocaleLowerCase();
     return this.pessoas.filter(
       pessoa => (pessoa.nome.toLocaleLowerCase().indexOf(filtrarPor)) !== -1  || (pessoa.cpf.toLocaleLowerCase().indexOf(filtrarPor)) !== -1 
@@ -35,9 +36,11 @@ export class PessoasComponent implements OnInit {
   }
 
   getPessoas() {
-    this.http.get('http://localhost:5000/site/values/').subscribe(response => { 
-      this.pessoas = response;
+    this.pessoaService.getAllPessoa().subscribe(
+      (_pessoas: Pessoa[]) => { 
+      this.pessoas =_pessoas;
       this.pessoasFiltradas = this.pessoas;
+      console.log(_pessoas);
     }, error => {
       console.log(error);
     });

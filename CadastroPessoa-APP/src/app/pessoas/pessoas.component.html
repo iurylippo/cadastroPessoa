@@ -19,7 +19,7 @@
   </thead>
   <tbody *ngIf="pessoas && pessoas.length">
     <tr *ngFor=" let pessoa of pessoasFiltradas">
-      <td>{{pessoa.pessoaId}}</td>
+      <td>{{pessoa.id}}</td>
       <td>{{pessoa.nome | titlecase}}</td>
       <td>{{pessoa.cpf}}</td>
       <td>{{pessoa.idade}}</td>
