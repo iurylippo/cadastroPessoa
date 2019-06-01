@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { PessoaService } from '../_services/Pessoa.service';
 import { Pessoa } from '../_models/Pessoa';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 
 
 @Component({
@@ -12,8 +13,15 @@ export class PessoasComponent implements OnInit {
 
   pessoasFiltradas: Pessoa[];
   pessoas: Pessoa[];
+  modalRef: BsModalRef;
 
   _filtroLista: string;
+
+  constructor(
+     private pessoaService : PessoaService
+   , private modalService : BsModalService
+    ) { }
+
   get filtroLista(): string {
     return this._filtroLista;
   }
@@ -22,7 +30,9 @@ export class PessoasComponent implements OnInit {
     this.pessoasFiltradas = this.filtroLista ? this.filtrarPessoas(this.filtroLista) : this.pessoas;
   }
 
-  constructor(private pessoaService : PessoaService) { }
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
 
   ngOnInit() {
     this.getPessoas();
