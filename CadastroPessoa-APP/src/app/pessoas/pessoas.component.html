@@ -26,15 +26,16 @@
       <td>{{pessoa.peso}}k</td>
       <td>{{pessoa.altura}}h</td>
       <td><strong>{{pessoa.imc | number : "1.2-2"}}</strong></td>
-      <td  class="text-center">
+      <td class="text-center">
         <div class="btn-group">
-          <button class="btn btn-warning m-1" tooltip="Editar" (click)="openModal(template)"><i class="fas fa-redo-alt mr-2"></i>Alterar</button>
+          <button class="btn btn-warning m-1" tooltip="Editar" (click)="openModal(template)"><i
+              class="fas fa-redo-alt mr-2"></i>Alterar</button>
           <button class="btn btn-danger m-1" tooltip="Deletar"><i class="fas fa-trash-alt mr-2"></i>Deletar</button>
         </div>
       </td>
     </tr>
   </tbody>
-  <tfoot *ngIf="!pessoas.length"> 
+  <tfoot *ngIf="!pessoas.length">
     <tr>
       <td colspan="7" class="text-center">
         <h4>Nenhuma Pessoa encontrada =[</h4>
@@ -46,12 +47,108 @@
 <ng-template #template>
   <div class="modal-header">
     <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="close pull-right" 
-    aria-label="Close" (click)="modalRef.hide()">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-  This is a modal.
-</div>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
 </ng-template>
+
+<form [formGroup]="registrForm">
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label>Nome</label>
+      <input type="text" class="form-control"
+        [ngClass]="{'is-invalid': registrForm.get('nome').touched && registrForm.get('nome').errors}"
+        formControlName="nome">
+      <div *ngIf="registrForm.get('nome').hasError('required') && registrForm.get('nome').touched"
+        class="invalid-feedback">
+        O Nome é obrigatório.
+      </div>
+      <div *ngIf="registrForm.get('nome').hasError('minlength') && registrForm.get('nome').touched"
+        class="invalid-feedback">
+        Mímino 2 caracteres.
+      </div>
+      <div *ngIf="registrForm.get('nome').hasError('maxlength') && registrForm.get('nome').touched"
+        class="invalid-feedback">
+        Máximo 100 caracteres.
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label>Cpf</label>
+      <input type="text" class="form-control"
+        [ngClass]="{'is-invalid': registrForm.get('cpf').touched && registrForm.get('cpf').errors}"
+        formControlName="cpf">
+      <div *ngIf="registrForm.get('cpf').hasError('required') && registrForm.get('cpf').touched"
+        class="invalid-feedback">
+        O Cpf é obrigatório.
+      </div>
+      <div *ngIf="registrForm.get('cpf').hasError('minlength') && registrForm.get('cpf').touched"
+        class="invalid-feedback">
+        Mímino 11 caracteres.
+      </div>
+      <div *ngIf="registrForm.get('cpf').hasError('maxlength') && registrForm.get('cpf').touched"
+        class="invalid-feedback">
+        Máximo 11 caracteres.
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>Idade</label>
+      <input type="text" [ngClass]="{'is-invalid': registrForm.get('idade').touched && registrForm.get('idade').errors}"
+        class="form-control" formControlName="idade">
+      <div *ngIf="registrForm.get('idade').hasError('required') && registrForm.get('idade').touched"
+        class="invalid-feedback">
+        O idade é obrigatório.
+      </div>
+      <div *ngIf="registrForm.get('idade').hasError('maxlength') && registrForm.get('idade').touched"
+        class="invalid-feedback">
+        Máximo 3 caracteres.
+      </div>
+    </div>
+    <div class="form-group col-md-4">
+      <label>Peso</label>
+      <input type="text" [ngClass]="{'is-invalid': registrForm.get('peso').touched && registrForm.get('peso').errors}"
+        class="form-control" formControlName="peso">
+      <div *ngIf="registrForm.get('peso').hasError('required') && registrForm.get('peso').touched"
+        class="invalid-feedback">
+        O peso é obrigatório.
+      </div>
+      <div *ngIf="registrForm.get('peso').hasError('maxlength') && registrForm.get('peso').touched"
+        class="invalid-feedback">
+        Máximo 5 caracteres.
+      </div>
+    </div>
+    <div class="form-group col-md-4">
+      <label>Altura</label>
+      <input type="text"
+        [ngClass]="{'is-invalid': registrForm.get('altura').touched && registrForm.get('altura').errors}"
+        class="form-control" formControlName="altura">
+      <div *ngIf="registrForm.get('altura').hasError('required') && registrForm.get('altura').touched"
+        class="invalid-feedback">
+        O altura é obrigatório.
+      </div>
+      <div *ngIf="registrForm.get('altura').hasError('maxlength') && registrForm.get('altura').touched"
+        class="invalid-feedback">
+        Máximo 5 caracteres.
+      </div>
+    </div>
+  </div>
+</form>
+<br>
+<button class="btn btn-secondary m-2" (click)="openModal(template)">
+  Fechar
+</button>
+<button class="btn btn-primary m-2" [disabled]="!registrForm.valid" (click)="salvarAlteracao()">
+  Salvar Alterações
+</button>
+<br>
+<br>
+
+<!-- <p>Form Value: {{registrForm.value | json}}</p>
+<p>Form Status: {{registrForm.status | json}}</p> -->
